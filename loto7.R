@@ -8,10 +8,8 @@ library(arules)
 
 
 # load data
-loto6 <- read.csv("data/loto6_data.csv")
 loto7 <- read.csv("data/loto7_data.csv")
 
-loto6 <- as.data.table(loto6)
 loto7 <- as.data.table(loto7)
 
 
@@ -139,7 +137,7 @@ ngrams <- apply(y, c(2,3), function(s) paste("(", paste(s, collapse=","), ")", s
 z <- sort(table(as.factor(ngrams)), decreasing=TRUE)
 
 head(z, n = 20)
-
+tail(z, n=20)
 
 
 
